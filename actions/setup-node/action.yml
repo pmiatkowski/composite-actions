@@ -1,0 +1,25 @@
+name: 'Setup Node.js'
+description: 'Sets up Node.js environment with caching and version management'
+
+inputs:
+  node-version:
+    description: 'Node.js version to use'
+    required: false
+    default: '20.x'
+  cache-deps:
+    description: 'Whether to cache dependencies'
+    required: false
+    default: 'true'
+
+runs:
+  using: "composite"
+  steps:
+    - uses: actions/setup-node@v4
+      with:
+        node-version: ${{ inputs.node-version }}
+        cache: 'npm'
+        
+    - name: Install dependencies
+      if: inputs.cache-deps == 'true'
+      shell: bash
+      run: npm ci

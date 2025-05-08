@@ -1,0 +1,20 @@
+name: AI Reviewer
+description: Comment from AI
+
+branding:
+  icon: "terminal"
+  color: "black"
+
+inputs:
+  GOOGLE_API_KEY:
+    description: "Google AI Studio API Key"
+    required: true
+
+runs:
+  using: "composite"
+  steps:      
+    - name: Run action
+      shell: bash
+      run: node ${{ github.action_path }}/dist/use-ai.js
+      env:
+        GOOGLE_API_KEY: ${{ inputs.GOOGLE_API_KEY }}

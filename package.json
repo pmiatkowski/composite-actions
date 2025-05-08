@@ -1,0 +1,20 @@
+{
+  "name": "composite-actions",
+  "version": "1.0.0",
+  "description": "Reusable composite actions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:ai-reviewer": "npx rolldown actions/ai-reviewer/src/use-ai.js --file actions/ai-reviewer/dist/use-ai.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/pmiatkowski/composite-actions"
+  },
+  "keywords": [
+    "composite",
+    "actions"
+  ],
+  "author": "Paweł Miatkowski",
+  "license": "ISC"
+}
