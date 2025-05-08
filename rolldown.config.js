@@ -1,5 +1,4 @@
 import {defineConfig} from "rolldown";
-import { builtinModules } from "module";
 
 export default defineConfig([
   {
@@ -11,6 +10,6 @@ export default defineConfig([
       minify: true,
     },
     platform: "node",
-    external: [], // Only exclude Node.js built-in modules
+    external: [],
   },
 ]);

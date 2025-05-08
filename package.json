@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "npx rolldown -c rolldown.config.js",
-    "build:ai-reviewer": "npx rolldown actions/ai-reviewer/src/use-ai.js --file actions/ai-reviewer/dist/use-ai.js",
+    "build:ai-reviewer": "npx rolldown actions/ai-reviewer/src/use-ai-review.js --file actions/ai-reviewer/dist/use-ai-review.js",
     "build:ai-jsdoc": "npx rolldown actions/ai-jsdoc/src/use-ai.js --file actions/ai-jsdoc/dist/use-ai.js",
     "build:all": "npm run build"
   },
