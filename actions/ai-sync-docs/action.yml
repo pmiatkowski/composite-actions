@@ -28,7 +28,7 @@ runs:
     - name: Scan files, update JSDocs, and apply changes
       id: ai-jsdoc-update
       shell: bash
-      run: node ${{ github.action_path }}/dist/use-ai-sync-docs.js
+      run: node ${{ github.action_path }}/dist/index.js
       env:
         GOOGLE_API_KEY: ${{ inputs.GOOGLE_API_KEY }}
         FILE_EXTENSIONS: ${{ inputs.FILE_EXTENSIONS }}
