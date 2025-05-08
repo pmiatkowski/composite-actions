@@ -2,7 +2,7 @@
   "name": "composite-actions",
   "version": "1.0.0",
   "description": "Reusable composite actions",
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
     "build": "npx rolldown -c rolldown.config.js",
     "build:ai-reviewer": "npx rolldown actions/ai-reviewer/src/use-ai.js --file actions/ai-reviewer/dist/use-ai.js",
