@@ -4,7 +4,7 @@ export default defineConfig([
   {
     input: "actions/ai-reviewer/src/use-ai-review.js",
     output: {
-      file: "dist/use-ai-review.js",
+      file: "actions/ai-reviewer/dist/use-ai-review.js",
       format: "commonjs",
     },
     external: ["@google/genai"],
