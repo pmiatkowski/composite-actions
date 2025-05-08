@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Reusable composite actions",
   "scripts": {
-    "build:ai-reviewer": "npx rolldown actions/ai-reviewer/src/use-ai.js --file actions/ai-reviewer/dist/use-ai.js"
+    "build": "npx rolldown actions/ai-reviewer/src/use-ai.js --file actions/ai-reviewer/dist/use-ai.js"
   },
   "repository": {
     "type": "git",
