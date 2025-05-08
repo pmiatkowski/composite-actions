@@ -15,6 +15,6 @@ runs:
   steps:      
     - name: Run action
       shell: bash
-      run: node ${{ github.action_path }}/../../dist/use-ai-review.js
+      run: node ${{ github.action_path }}/../../../dist/use-ai-review.js
       env:
         GOOGLE_API_KEY: ${{ inputs.GOOGLE_API_KEY }}
