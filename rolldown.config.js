@@ -1,22 +1,15 @@
 import {defineConfig} from "rolldown";
+import { builtinModules } from "module";
+import path from "path";
 
 export default defineConfig([
   {
     input: "actions/ai-reviewer/src/use-ai-review.js",
     output: {
       file: "actions/ai-reviewer/dist/use-ai-review.js",
-      format: "commonjs",
+      format: "esm"
     },
-    external: ["@google/genai"],
     platform: "node",
+    external: [],
   },
-//   {
-//     input: "actions/ai-jsdoc/src/use-ai-jsdoc.js",
-//     output: {
-//       file: "dist/use-ai-jsdoc.js",
-//       format: "cjs",
-//     },
-//     external: ["@google/genai"],
-//     platform: "node",
-//   }
 ]);
