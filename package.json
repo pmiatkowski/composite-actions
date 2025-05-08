@@ -2,8 +2,12 @@
   "name": "composite-actions",
   "version": "1.0.0",
   "description": "Reusable composite actions",
+  "type": "module",
   "scripts": {
-    "build": "npx rolldown actions/ai-reviewer/src/use-ai.js --file actions/ai-reviewer/dist/use-ai.js"
+    "build": "npx rolldown -c rolldown.config.js",
+    "build:ai-reviewer": "npx rolldown actions/ai-reviewer/src/use-ai.js --file actions/ai-reviewer/dist/use-ai.js",
+    "build:ai-jsdoc": "npx rolldown actions/ai-jsdoc/src/use-ai.js --file actions/ai-jsdoc/dist/use-ai.js",
+    "build:all": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -15,15 +19,22 @@
   "homepage": "https://github.com/pmiatkowski/composite-actions#readme",
   "keywords": [
     "composite",
-    "actions"
+    "actions",
+    "github",
+    "action",
+    "ai",
+    "pr-review"
   ],
   "author": "Paweł Miatkowski",
   "license": "ISC",
-  "devDependencies": {
-    "dotenv": "16.5.0"
-  },
   "dependencies": {
+    "@actions/core": "1.11.1",
+    "@actions/github": "6.0.0",
     "@google/genai": "0.9.0"
+  },
+  "devDependencies": {
+    "dotenv": "16.4.5",
+    "rolldown": "1.0.0-beta.8"
   },
   "engines": {
     "node": ">=20.0.0"
