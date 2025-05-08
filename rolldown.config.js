@@ -5,7 +5,7 @@ export default defineConfig([
     input: "actions/ai-reviewer/src/use-ai-review.js",
     output: {
       file: "dist/use-ai-review.js",
-      format: "cjs",
+      format: "esm",
     },
     external: ["@google/genai"],
     platform: "node",
