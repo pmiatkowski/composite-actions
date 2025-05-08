@@ -18,3 +18,4 @@ runs:
       run: node ${{ github.action_path }}/dist/use-ai-review.js
       env:
         GOOGLE_API_KEY: ${{ inputs.GOOGLE_API_KEY }}
+        GITHUB_TOKEN: ${{ github.token }}
