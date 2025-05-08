@@ -1,15 +1,16 @@
 import {defineConfig} from "rolldown";
 import { builtinModules } from "module";
-import path from "path";
 
 export default defineConfig([
   {
     input: "actions/ai-reviewer/src/use-ai-review.js",
     output: {
       file: "actions/ai-reviewer/dist/use-ai-review.js",
-      format: "esm"
+      format: "cjs",
+      inlineDynamicImports: true,
+      minify: true,
     },
     platform: "node",
-    external: [],
+    external: [], // Only exclude Node.js built-in modules
   },
 ]);
