@@ -10,13 +10,13 @@ export default defineConfig([
     external: ["@google/genai"],
     platform: "node",
   },
-  {
-    input: "actions/ai-jsdoc/src/use-ai-jsdoc.js",
-    output: {
-      file: "dist/use-ai-jsdoc.js",
-      format: "cjs",
-    },
-    external: ["@google/genai"],
-    platform: "node",
-  }
+//   {
+//     input: "actions/ai-jsdoc/src/use-ai-jsdoc.js",
+//     output: {
+//       file: "dist/use-ai-jsdoc.js",
+//       format: "cjs",
+//     },
+//     external: ["@google/genai"],
+//     platform: "node",
+//   }
 ]);
