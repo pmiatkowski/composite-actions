@@ -10,9 +10,28 @@ This repository contains a set of composite actions that can be reused across di
 
 To use these composite actions in your workflows, reference them using the following pattern:
 
+### AI Reviewer Action
+
+For detailed configuration options, see [AI Reviewer documentation](actions/ai-reviewer/README.md).
+
 ```yaml
 steps:
-  - uses: owner/composite-actions/action-name@v1
+  - uses: pmiatkowski/composite-actions/actions/ai-reviewer@v1
+    with:
+      # Add your AI reviewer specific inputs here
+      # See actions/ai-reviewer/README.md for all available options
+```
+
+### Setup Node Action
+
+For detailed configuration options, see [Setup Node documentation](actions/setup-node/README.md).
+
+```yaml
+steps:
+  - uses: pmiatkowski/composite-actions/actions/setup-node@v1
+    with:
+      # Add your Node.js setup specific inputs here
+      # See actions/setup-node/README.md for all available options
 ```
 
 ## Available Actions
@@ -23,6 +42,13 @@ Documentation for each action can be found in their respective directories:
   - Each action has its own README with specific usage instructions
   - Input/output parameters are documented
   - Examples are provided
+
+### Available Scripts
+
+The following npm scripts are available:
+
+- `test`: Run tests (currently not implemented)
+- `build:ai-reviewer`: Build the AI reviewer action using rolldown
 
 ## Development
 
@@ -76,11 +102,11 @@ Branches should follow the conventional commits pattern:
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the ISC License - see the [LICENSE](LICENSE) file for details.
 
 ## Maintainers
 
-- [Owner Name]
+- Paweł Miatkowski
 
 ## Support
 

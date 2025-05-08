@@ -11,6 +11,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initial repository setup
 - Basic documentation structure
-- MIT License
+- ISC License
 - Conventional commits configuration
 - Pre-commit hooks for commit message validation
+
+### Changed
+
+- Updated README.md with correct maintainer info and available scripts
+- Standardized license to ISC (previously MIT)
+- Added build:ai-reviewer script documentation
